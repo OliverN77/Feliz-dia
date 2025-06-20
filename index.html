@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎂 ¡Feliz Cumpleaños! 🎉</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Fredoka+One:wght@400&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Confeti animado de fondo -->
+  <div class="confetti-container" id="confetti-container"></div>
+  
+  <!-- Globos flotantes -->
+  <div class="balloons-container">
+    <div class="balloon balloon-1">🎈</div>
+    <div class="balloon balloon-2">🎈</div>
+    <div class="balloon balloon-3">🎈</div>
+    <div class="balloon balloon-4">🎈</div>
+    <div class="balloon balloon-5">🎈</div>
+  </div>
+
+  <header>
+    <div class="birthday-header">
+      <h1 class="birthday-title">
+        <span class="sparkle">✨</span>
+        ¡Es tu día especial! Darlyng
+        <span class="sparkle">✨</span>
+      </h1>
+      <p class="birthday-subtitle">Desplázate hacia abajo para abrir tu carta de cumpleaños</p>
+      <div class="birthday-icons">
+        🎂 🎁 🎉 🎊 🥳
+      </div>
+      
+      <!-- Galería de imágenes de vida en el header -->
+      <div class="header-life-gallery">
+        <div class="header-stage-item" data-animation="slideInUp" data-delay="500">
+          <div class="header-stage-image">
+            <img src="/img/foto-2.jpg" alt="Infancia" loading="lazy">
+            <div class="header-stage-overlay">
+              <span class="header-stage-emoji">👶</span>
+              <span class="header-stage-text">Infancia</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="header-stage-item" data-animation="slideInUp" data-delay="700">
+          <div class="header-stage-image">
+            <img src="/img/foto-1.jpg" alt="Juventud" loading="lazy">
+            <div class="header-stage-overlay">
+              <span class="header-stage-emoji">🧑</span>
+              <span class="header-stage-text">Juventud</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="header-stage-item" data-animation="slideInUp" data-delay="900">
+          <div class="header-stage-image">
+            <img src="img/foto-7.jpg" alt="Adultez" loading="lazy">
+            <div class="header-stage-overlay">
+              <span class="header-stage-emoji">👨‍💼</span>
+              <span class="header-stage-text">Adolescencia</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="header-stage-item" data-animation="slideInUp" data-delay="1100">
+          <div class="header-stage-image">
+            <img src="/img/foto-6.jpg" alt="Sabiduría" loading="lazy">
+            <div class="header-stage-overlay">
+              <span class="header-stage-emoji">🌟</span>
+              <span class="header-stage-text">Actualidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="header-message">
+        <p>🌟 Un viaje a través de los momentos más importantes de la vida 🌟</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="spacer"></section>
+
+  <section class="envelope-section" id="envelope-section">
+    <!-- Imágenes de etapas de vida que aparecen durante el scroll -->
+    <div class="life-stages-scroll" id="life-stages-scroll">
+      <div class="life-stage-item" data-stage="0">
+        <img src="img/foto-4.jpg" alt="Infancia" loading="lazy">
+        <div class="stage-label">
+          <!-- Contenido se agrega dinámicamente -->
+        </div>
+      </div>
+      
+      <div class="life-stage-item" data-stage="1">
+        <img src="img/foto-5.jpg" alt="Juventud" loading="lazy">
+        <div class="stage-label">
+          <!-- Contenido se agrega dinámicamente -->
+        </div>
+      </div>
+      
+      <div class="life-stage-item" data-stage="2">
+        <img src="img/foto-8.jpg" alt="Adultez" loading="lazy">
+        <div class="stage-label">
+          <!-- Contenido se agrega dinámicamente -->
+        </div>
+      </div>
+      
+      <div class="life-stage-item" data-stage="3">
+        <img src="img/foto-3.jpg" alt="Sabiduría" loading="lazy">
+        <div class="stage-label">
+          <!-- Contenido se agrega dinámicamente -->
+        </div>
+      </div>
+    </div>
+
+    <div class="envelope-container">
+      <!-- Sobre de cumpleaños -->
+      <div class="envelope" id="envelope">
+        <!-- Solapa trasera (la que se abre) -->
+        <div class="flap back-flap" id="back-flap"></div>
+        
+        <!-- Cuerpo del sobre -->
+        <div class="envelope-body">
+          <div class="envelope-front">
+            <div class="envelope-decoration">
+              <div class="birthday-stamp">🎂</div>
+              <div class="heart-decoration">💝</div>
+            </div>
+          </div>
+          <div class="envelope-back"></div>
+          <div class="envelope-left"></div>
+          <div class="envelope-right"></div>
+          <div class="envelope-bottom"></div>
+        </div>
+        
+        <!-- Solapa frontal -->
+        <div class="flap front-flap">
+          <div class="wax-seal">🎉</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Indicador de progreso de scroll -->
+    <div class="scroll-indicator">
+      <div class="scroll-text">¡Sigue haciendo scroll para la sorpresa! 🎁</div>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- Modal overlay -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  
+  <!-- Carta de cumpleaños como modal (SIN imágenes) -->
+  <div class="letter birthday-letter" id="letter">
+    <button class="close-button" id="close-button">&times;</button>
+    <div class="letter-content" id="letter-content">
+      <div class="letter-header">
+        <h2 class="birthday-greeting">🎉 ¡FELIZ CUMPLEAÑOS! 🎉</h2>
+        <div class="birthday-date">En este día tan especial...</div>
+      </div>
+      
+      <div class="letter-body">
+        <p class="greeting">Querida hija Darlyng</p>
+        
+        <p>Hoy es un día mágico, lleno de alegría y celebración. Es el día en que llegaste a este mundo para llenarnos de luz y felicidad. 🌟</p>
+        
+        <p>A lo largo de tu vida has pasado por diferentes etapas, cada una llena de aprendizajes y fortalezas. Desde la inocencia de la infancia hasta la sabiduría que has adquirido con los años porque claro ya tienes 18 años.</p>
+        
+        <p>Que este nuevo año de vida esté repleto de:</p>
+        <ul class="birthday-wishes">
+          <li>🎈 Momentos inolvidables</li>
+          <li>🎁 Sorpresas maravillosas</li>
+          <li>💖 Amor incondicional</li>
+          <li>🌈 Colaboración brindadas</li>
+          <li>🎊 Risas sin fin</li>
+        </ul>
+        
+        <p>Que cada día sea una nueva aventura, que cada sonrisa ilumine tu camino y que la felicidad te acompañe siempre.</p>
+        
+        <p>¡Eres una persona increíble y mereces todo lo mejor que la vida tiene para ofrecer!</p>
+        
+        <div class="birthday-cake">
+          <div class="cake">🎂</div>
+          <div class="candles">🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️ 🕯️</div>
+          <p class="cake-text">¡Pide un deseo! ✨</p>
+        </div>
+        
+        <p class="signature">
+          Con todo mi cariño y los mejores deseos,<br>
+          <span class="signature-name">💝 Tu querido padre Alonso 💝</span>
+        </p>
+        
+        <div class="birthday-footer">
+          <div class="party-emojis">🥳 🎉 🎊 🎈 🎁 🎂 🌟</div>
+          <p class="final-message">¡Que tengas el mejor día de todos!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="spacer"></section>
+
+  <footer>
+    <div class="birthday-footer-content">
+      <p>🎉 Creado con mucho amor para tu día especial 🎉</p>
+      <div class="footer-decorations">
+        <span>🎂</span>
+        <span>🎈</span>
+        <span>🎁</span>
+        <span>🎊</span>
+        <span>🥳</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Audio de cumpleaños (opcional) -->
+  <audio id="birthday-audio" preload="auto">
+    <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
