@@ -108,12 +108,12 @@ document.addEventListener("DOMContentLoaded", () => {
           title: 'Juventud 🧑',
           description: 'Sueños grandes, aventuras emocionantes, la pasión por la vida y la búsqueda de nuestra identidad.'
         },
-        'Adultez': {
-          title: 'Adultez 👨‍💼',
+        'Adolescencia': {
+          title: 'Adolescencia 👨‍💼',
           description: 'Logros importantes, responsabilidades, construyendo el futuro y dejando nuestra huella en el mundo.'
         },
-        'Sabiduría': {
-          title: 'Sabiduría 👴',
+        'Actualidad': {
+          title: 'Actualidad 🌟',
           description: 'Experiencia acumulada, serenidad, compartiendo conocimiento y disfrutando los frutos de la vida.'
         }
       }
